@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <style>
+            body {
+            font-family: Arial;
+            font-size: 16px;
+            }
+      
+          .container {
+            width: 100%;
+            max-width: 974px;
+            min-width: 0;
+            background-color: #f1#f1#f1;
+            margin: auto;
+            left: 0;
+            right: 0;
+            height: auto;
+            bottom: auto;
+            display:none;
+          }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 id="pageTitle">Web Programming </h1>
+            <nav>
+                
+            </nav>
+        </header>
+
+        <!-- root container: container that includes sub-containers -->
+        <div id="rootContainer" class="container" style="display:block">
+
+            <!-- codeContainer: container that shows property options -->
+            <div id="codeContainer"> 
+                <!-- Title of container title -->
+                <div class="containerTitle">CSS Property:</div>
+                <!-- form that shows properties options -->
+                <form class="code">
+
+                    <!-- property Titile: It can be changed according to the proerty -->
+                    <div id="propertyTitle">animation-timing-function:</div>
+                    <br>
+                    <!-- hidden input tag to store input input data -->
+                    <input type="hidden" id="preselectedValue" value = "1s">
+
+                    <!-- menu items to be selected by radio button-->
+                    <div class="radio">
+                        <input autocomplete="off" type="radio" name="radio_position" 
+                               onclick="getPropertyValue(this)" id = "value_1" value="1s">
+                        <label for="value_1">1s</label>
+                    </div>
+                    <div class="radio">
+                        <input autocomplete="off" type="radio" name="radio_position" 
+                               onclick="getPropertyValue(this)" id = "value_2" value="2s">
+                        <label for="value_2">2s</label>
+                    </div>  
+                    <div class="radio">
+                        <input autocomplete="off" type="radio" name="radio_position" 
+                               onclick="getPropertyValue(this)" id = "value_3" value="5s">
+                        <label for="value_3">5s</label>
+                    </div>  
+                     <div class="radio">
+                        <input autocomplete="off" type="radio" name="radio_position" 
+                               onclick="getPropertyValue(this)" id = "value_4" value="-1s">
+                        <label for="value_4">-1s</label>
+                    </div>  
+                </form> <!-- end of form --> 
+            
+                <footer class="pfooter">
+                    <p>
+                        <strong>Note:</strong>
+                        <span id="note">note contents</span>
+                    </p>
+                </footer>
+            </div>    <!-- end of codeContainer -->
+          
+            <!-- resultContainer: container that represents results -->
+            <div class="resultContainer"> 
+                <!-- sub container for result -->
+                <div class="containerTitle">Result:</div> 
+                <!-- resultView where results are going to be shown -->
+                <div id="resultView">
+                    <!-- resultDiv:  parent object of the real object -->
+                    <div id="resultDIV">
+                        <div>
+                            <!-- demoDiv: the real object to be animated -->
+                            <div id="demoDIV">
+                            </div>               
+                        </div>
+                    </div>
+                </div>
+           
+                <!-- sub container for CSS code -->
+                <div class="containerTitle">CSS Code:</div>
+                <!-- adopted css code  -->
+                <!-- propertyName: This bounds to the propertyTitle --> 
+                <!-- enlargecssprop: This bounds to the selected property value --> 
+                <pre id="currentCode">#demoDIV {<br> <span id="propertyName">animation-timing-function:<span id="enlargecssprop">1s</span>;<br>}
+                </pre>  <!-- end adopted css code -->
+          
+            </div>    <!-- end of resultContainer -->
+
+        </div>      <!-- end of rootContainer -->
+        
+        <!-- footter of this page --> 
+        <footer>
+        </footer>
+        <script type="text/javascript">setup()</script>
+    </body>
+</html>
