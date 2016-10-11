@@ -5,7 +5,9 @@ This Project is Web Programming codes to study HTML5, JavaScript, and CSS style 
 Defined functions:
 
 setup(): set input value to a pre-selected value
+
 getPropertyValue(obj): retrieves the selected value and call restartDemo function
+
 restartDemo(value): updae the CSS code
 
 
